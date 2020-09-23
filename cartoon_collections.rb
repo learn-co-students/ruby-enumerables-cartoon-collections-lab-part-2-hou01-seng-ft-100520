@@ -1,3 +1,5 @@
+require 'pry'
+
 def square_array(array)
   array.map do |element|
     element * element
@@ -25,10 +27,8 @@ end
 def find_valid_calls(planeteer_calls)
   valid_calls = ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
   planeteer_calls.find do |value|
-    value == valid_calls
-   end
-    
-
+    valid_calls.include?(value)
+    end
 
   # Use an Enumerable to check if any elements in the passed in array match the valid calls listed above 
   # Return the first valid call found, or return nil if no valid calls are found
